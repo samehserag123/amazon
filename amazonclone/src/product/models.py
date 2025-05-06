@@ -30,8 +30,16 @@ class Product(models.Model):
     def save(self , *args , **kwargs):
         self.slug = slugify(self.name)
         super(Product , self).save(*args , **kwargs)
-        
 
+    def avg_rate(self):
+        product_reviews = self.product_review.all()
+        if len(product_reviews) > 0 :
+            review_sum = 0
+            for rate in product_reviews:
+                review_sum += rate.rate
+            return review_sum/len(product_reviews)
+        else:
+            return 0
 
 class ProductImages(models.Model):
     product = models.ForeignKey(Product,related_name='product_images',on_delete=models.CASCADE)
