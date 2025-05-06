@@ -8,7 +8,7 @@ urlpatterns = [
     path ('',ProductList.as_view(),name = 'Product_List'),
     path ('<slug:slug>',ProductDetail.as_view(),name='product_detail'),
     path ('<slug:slug>/add-review',add_review,name='add_review'),
-    path('brands/',BrandList.as_view(),name='brand_list'),
-        path('brands/<slug:slug>',BrandDetail.as_view(),name='brand_detail'),
+    path('brands/' , BrandList.as_view() , name='brand_list'),
+    path('brands/<slug:slug>',BrandDetail.as_view(),name='brand_detail'),
 
 ]
