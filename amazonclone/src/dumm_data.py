@@ -43,8 +43,8 @@ def seed_product_images(n):
         )
     print(f'{n} Products image seeded')
 
-seed_brand(50)
-seed_product(1)
-seed_product_images(1)
+seed_brand(10)
+seed_product(10)
+seed_product_images(10)
 
 
