@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block CSS %}
-<link rel="stylesheet" href="{%static 'en/css/product-details.css'%}">
+    <link rel="stylesheet" href="{%static 'en/css/product-details.css'%}">
 {% endblock CSS %}
 
 {% block body %}
@@ -40,12 +40,13 @@
                             </div>
                             <ul class="details-preview">
                                 {% for image1 in object.product_images.all %}
-                                <li><img src="{{image1.image.url}}" alt="product"></li>
+                                    <li><img src="{{image1.image.url}}" alt="product"></li>
                                 {% endfor %}
+                                
                             </ul>
                             <ul class="details-thumb">
                                 {% for image1 in object.product_images.all %}
-                                <li><img src="{{image1.image.url}}" alt="product"></li>
+                                    <li><img src="{{image1.image.url}}" alt="product"></li>
                                 {% endfor %}
                             </ul>
                         </div>
